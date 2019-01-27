@@ -1,0 +1,670 @@
+
+<!-- There is no coupon for PD1, because it's cheap :)), in other words, PD1.coupon='' -->
+
+<!-- Coupon: PD2 | LuckY_FxBX8_QwJK7 -->
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+	<title>Home</title>
+
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--===============================================================================================-->
+
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!--===============================================================================================-->
+
+
+
+</head>
+
+<body class="animsition" ng-app="myApp" ng-controller="myController">
+
+ 		<span ng-init="coupon='<?php echo $code ?>'"></span>
+
+		
+
+
+
+	<!-- Header -->
+
+	<header class="header1">
+
+		<!-- Header desktop -->
+
+		<div class="container-menu-header">
+
+			<div class="topbar">
+
+			</div>
+
+			<div class="wrap_header">
+
+				<!-- Logo -->
+
+				<a href="index.html" class="logo">
+
+					<img src="images/icons/logo.png" alt="IMG-LOGO">
+
+				</a>
+
+
+
+				<!-- Menu -->
+
+				<div class="wrap_menu">
+
+				</div>
+
+
+
+				<!-- Header Icon -->
+
+				<div class="header-icons">
+
+					<span class="linedivide1"></span>
+
+
+
+					CURRENT BALANCE $ <b>{{ amount }}</b>
+
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+
+
+	</header>
+
+
+
+	<!-- Slide1 -->
+
+	<section class="slide1">
+
+		<div class="wrap-slick1">
+
+			<div class="slick1">
+
+				<div class="item-slick1 item1-slick1" style="background-image: url(images/banner2.jpg);">
+
+					<div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
+
+						<span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
+
+							Lunar New Year 2019 is coming
+
+						</span>
+
+
+
+						<h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
+
+							TET'S SHOP
+
+						</h2>
+
+
+
+						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
+
+							<!-- Button -->
+
+							<a href="#np" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+
+								Shop Now
+
+							</a>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<!-- New Product -->
+
+	<section id="np" class="bgwhite p-t-45 p-b">
+
+		<div class="container">
+
+			<div class="sec-title p-b-20">
+
+				<h3 class="m-text5 t-center">
+
+					Featured Products
+
+				</h3>
+
+			</div>
+
+
+
+			<!-- Slide2 -->
+
+			<div class="wrap-slick2">
+
+				<div class="slick2">
+
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+
+						<!-- Block2 -->
+
+						<div class="block2">
+
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+
+								<img src="images/product-01.jpg" alt="IMG-PRODUCT">
+
+
+
+								<div ng-class="{'block2-overlay': !product[0].is_bought}" class="trans-0-4">
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+
+										<!-- Button -->
+
+										<button ng-click="addToCart(product[0]); isComplete()" ng-hide="product[0].is_bought"  class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+
+											Add to Cart
+
+										</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+
+
+							<div class="block2-txt p-t-20">
+
+								<a class="block2-name dis-block s-text3 p-b-5">
+
+									Mứt (PD1)
+
+								</a>
+
+
+
+								<span class="block2-price m-text6 p-r-5">
+
+									${{product[0].price}} 
+
+								</span>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+
+						<!-- Block2 -->
+
+						<div class="block2">
+
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+
+								<img src="images/product-02.jpg" alt="IMG-PRODUCT">
+
+
+
+								<div ng-class="{'block2-overlay': !product[1].is_bought}" class="trans-0-4">
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+
+										<!-- Button -->
+
+										<button ng-click="addToCart(product[1]); isComplete()" ng-hide="product[1].is_bought" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+
+											Add to Cart
+
+										</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+
+
+							<div class="block2-txt p-t-20">
+
+								<a class="block2-name dis-block s-text3 p-b-5">
+
+									Bánh chưng (PD2)
+
+								</a>
+
+
+
+								<span class="block2-price m-text6 p-r-5">
+
+								${{product[1].price}}
+
+								</span>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+
+						<!-- Block2 -->
+
+						<div class="block2">
+
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+
+								<img src="images/product-03.jpg" alt="IMG-PRODUCT">
+
+
+
+								<div ng-class="{'block2-overlay': !product[2].is_bought}" class="trans-0-4">
+
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+
+										<!-- Button -->
+
+										<button ng-click="addToCart(product[2]); isComplete()" ng-hide="product[2].is_bought" class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+
+											Add to Cart
+
+										</button>
+
+									</div>
+
+								</div>
+
+							</div>
+
+
+
+							<div class="block2-txt p-t-20">
+
+								<a class="block2-name dis-block s-text3 p-b-5">
+
+									Hoa mai (PD3)
+
+								</a>
+
+
+
+								<span class="block2-price m-text6 p-r-5">
+
+								${{product[2].price}}
+
+								</span>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+
+		</div>
+
+	</section>
+
+
+
+	<section class= "bgwhite p-t-20 p-b-50">
+
+		<div class="sec-title p-b-10">
+
+			<h3 class="m-text5 t-center">
+
+							PROMOTION
+
+			</h3>
+
+		</div>	
+
+
+
+		<div class="flex-w flex-sb-m p-t-25 p-b-25 bo8 p-l-230 p-r-60 p-lr-15-sm">
+
+
+
+				<div class="flex-w flex-m w-full-sm p-l-60 p-b-5">
+
+
+
+					<div class="size11 bo4 m-r-10">
+
+						<input ng-model="inputProductId" class="coupon-form sizefull s-text7 p-l-22 p-r-22" type="text" name="product-id" placeholder="Product ID">
+
+					</div>
+
+
+
+					<div class="size11 bo4 m-r-10">
+
+						<input ng-model="inputConput" class="coupon-form sizefull s-text7 p-l-22 p-r-22" type="text" name="coupon-code" placeholder="Coupon Code">
+
+					</div>
+
+
+
+
+
+					<div class="size12 trans-0-4 m-t-10 m-b-10 m-r-10">
+
+						<!-- Button -->
+
+						<button ng-click="applyCoupon(inputProductId, inputConput);" class="coupon-submit flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+
+							Apply coupon
+
+						</button>
+
+					</div>
+
+				</div>
+
+
+
+			</div>
+
+	</section>
+
+
+
+
+
+	<!-- Footer -->
+
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+
+		<div class="t-center p-l-15 p-r-15">
+
+			<div class="t-center s-text8 p-t-20">
+
+				Copyright © 2019 All rights reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+
+			</div>
+
+		</div>
+
+	</footer>
+
+
+
+
+
+
+
+	<!-- Back to top -->
+
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+
+		<span class="symbol-btn-back-to-top">
+
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+
+		</span>
+
+	</div>
+
+
+
+
+
+	
+
+
+
+
+
+<!--===============================================================================================-->
+
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+
+	<script type="text/javascript">
+
+		$(".selection-1").select2({
+
+			minimumResultsForSearch: 20,
+
+			dropdownParent: $('#dropDownSelect1')
+
+		});
+
+	</script>
+
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+
+	<script type="text/javascript" src="js/main.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9/aes.min.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9/md5.min.js"></script>
+
+<!--===============================================================================================-->	
+
+	<script>
+
+		var app = angular.module('myApp', []);
+
+		
+
+		app.controller('myController',  function($scope){
+
+			$scope.amount = 50;
+
+
+
+			$scope.product = [{price: 30, is_bought: false, coupon: ''},
+
+							  {price: 60, is_bought: false, coupon: ''},
+
+							  {price: 60, is_bought: false, coupon: ''}];
+
+            
+
+            $scope.flag = 'U2FsdGVkX1+yTYU+aWtCMYeYgJA9hVhMHjk6OJ1LvSiegzKekiS09ngXYCmoVwQOY3N3oZ7Vjo/ATK294qpDFiHdEWTK/YcF+wSzM3glf10=';
+
+
+
+			$scope.addToCart = function(product) {
+
+				if($scope.amount >= product.price) {
+
+					$scope.amount -= product.price;
+
+					product.is_bought = true;
+
+				} else {
+
+					swal("Insufficent fund!", "", "error");
+
+				}
+
+			}
+
+
+
+			$scope.applyCoupon = function(productId, code) {
+
+
+
+				$.post("checkcoupon.php",
+
+				{
+
+					productId: productId, 
+
+					code: code
+
+				}, function(data, status){
+
+					console.log(data);
+
+					switch (data) {
+
+						case "Success":
+
+							$scope.$apply(function () {
+
+								$scope.product[parseInt(productId.slice(-1)) - 1].price = 10;
+
+                                $scope.product[parseInt(productId.slice(-1)) - 1].coupon = code;
+
+							});
+
+							swal("$50 off for " + productId, code + " is applied", "success");
+
+							break;
+
+						case "Invalid code":
+
+							swal("Invalid code", "Recheck your code: " + code, "error");
+
+							break;
+
+						case "Expired code": 
+
+							swal("Used or expired code", "Recheck your code: " + code, "error");
+
+							break;
+
+						case "Product not found": 
+
+							swal("Unavailable", "Promotion for this product is not exist", "error");
+
+							break;
+
+						case "Query error":
+
+							swal("Query error", "Hmmm... What the heck r u doing?", "warning");
+
+					}
+
+				});
+
+			}
+
+			
+
+			$scope.isComplete = function() {
+
+                var key = $scope.product[0].coupon + $scope.product[1].coupon + $scope.product[2].coupon,
+
+                    flag = CryptoJS.AES.decrypt($scope.flag, key).toString(CryptoJS.enc.Utf8),
+
+                    valid = flag.match(/^efiens{.*\}$/g);
+
+
+
+				if(valid != null && $scope.product[0].is_bought && $scope.product[1].is_bought && $scope.product[2].is_bought) {
+
+					swal(flag, "is your flag", "success");
+
+				}
+
+			}
+
+
+
+		})
+
+	</script>
+
+<!--===============================================================================================-->	
+
+</body>
+
+</html>
+
+
